@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	        <link rel="stylesheet" href="cart.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="payment ">
+    <h1>PAYMENT</h1>
+    
+    <p id="smg"></p>
+    
+    <label for="">TOTAL PRICE</label>
+    <input type="number" name="" id="p3">
+    <br><br>
+    <label for="">CASH:</label>
+    <input type="number" name="" id="csh">
+    <br><br>
+     
+    <button onclick="chng()">CHANGE:</button>
+    <p id="showchng"></p>
+
+    <BUtton> <a href="main.html">BACK</a> </BUtton>
+   
+    <SCript>
+        
+
+                
+         var h5=document.getElementById('smg');
+           h5.innerHTML="TOTAL AMOUNT: "+localStorage.getItem("hehe")
+		   document.getElementById("p3").value = localStorage.getItem("hehe");
+document.getElementById("p3").disabled = true;		   
+
+		
+          
+           function chng(){    
+            var p3 = document.getElementById('p3').value;
+            var cash= document.getElementById('csh').value;
+           
+
+            var tchange= parseFloat(cash) - parseFloat(localStorage.getItem("hehe"));
+    
+            var change= document.getElementById('showchng');
+            change.innerHTML=" The change is: "+tchange.toFixed(2);
+        }
+    </SCript>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+	<link rel="stylesheet" type="text/css"href="login.css">
+</head>
+
+		<body>
+		<div class="logininbox">
+		<img src="pink.png" class="avatar">
+		
+		
+		<h1>Login Here</h1>
+			<h2></h2>
+    <label for="">Username</label>
+    <input type="text" name="" id="LN">
+    <br>
+    <label for="">Password</label>
+    <input type="password" name="" id="FN">
+    <div class="button">
+    <button id="btn" class="login">Login</button>
+	</div>
+    <script>
+        var btn=document.getElementById('btn');
+        btn.addEventListener('click', function(){
+        
+            var LN=document.getElementById('LN').value;
+            var FN=document.getElementById('FN').value;
+  
+            
+
+            if (LN==""){         
+            alert("Username is required");
+            }
+            else if(FN==""){
+                alert("Password is required");
+            }
+          
+            else if (LN=="jorie" && FN=="jorie"){
+               alert("access granted");
+            
+            
+            localStorage.setItem("HEHE",LN);
+            window.location.href="home.html";
+            }
+
+            else{
+                alert("Access denied");
+            }
+          
+            
+        });
+    </script>   
+    
+</body>
+
+</html>
